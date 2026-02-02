@@ -144,3 +144,70 @@ h1 {
 @media (max-width: 860px) {
   .grid { grid-template-columns: 1fr; }
 }
+
+/* Image slideshow */
+.about-slideshow {
+  margin-top: 14px;
+  max-width: 420px;  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.slideshow-frame {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.22);
+}
+
+.slideshow-image {
+  width: 100%;
+  height: 520px;
+  display: block;
+  object-fit: cover;
+}
+
+.slideshow-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.slide-btn {
+  border: 1px solid rgba(255,255,255,0.14);
+  background: transparent;
+  color: inherit;
+  padding: 8px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.slide-btn:hover {
+  opacity: 0.9;
+}
+
+.slide-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.slide-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: transparent;
+  cursor: pointer;
+}
+
+.slide-dot.active {
+  background: rgba(255,255,255,0.75);
+}
