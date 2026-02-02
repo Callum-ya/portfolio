@@ -211,3 +211,19 @@ h1 {
 .slide-dot.active {
   background: rgba(255,255,255,0.75);
 }
+
+/* Typewriter effect cursor */
+#typed-text, .cursor {
+  display: inline;
+}
+
+.cursor {
+  margin-left: 2px;
+  animation: blink 1.2s steps(1, end) infinite;
+  opacity: .75;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+

@@ -108,3 +108,18 @@ if (slideImageEl && prevButtonEl && nextButtonEl && dotsContainerEl) {
 
   if (AUTO_PLAY_ENABLED) startAutoPlay();
 }
+
+// Typewriter effect for greeting
+var i = 0;
+var txt = 'Hi, I’m Callum.'; /* The text */
+var speed = 150; /* The speed/duration of the effect in milliseconds */
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("typed-text").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+window.addEventListener("load", typeWriter);
