@@ -431,35 +431,42 @@ h1 {
 
 .contact-layout {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 40px;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
   align-items: start;
 }
 
 .contact-intro h2 {
   margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .contact-intro p {
-  max-width: 50ch;
+  margin: 0 0 14px;
+  max-width: 48ch;
+  opacity: 0.9;
 }
 
 .contact-links {
   display: flex;
-  gap: 16px;
-  margin-top: 20px;
+  gap: 14px;
+  margin-top: 18px;
   flex-wrap: wrap;
 }
 
 .contact-links a {
-  font-weight: 600;
+  font-weight: 500;
 }
 
+
+/* Form uses same visual language as site cards */
 .contact-form {
   display: grid;
-  gap: 16px;
+  gap: 14px;
 }
 
+
+/* Individual field */
 .form-group {
   display: grid;
   gap: 6px;
@@ -467,53 +474,79 @@ h1 {
 
 .form-group label {
   font-size: 14px;
-  font-weight: 600;
+  opacity: 0.85;
 }
 
+
+/* Inputs match the site's subtle borders/background */
 .form-group input,
 .form-group textarea {
   width: 100%;
+
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.03);
+
+  color: #e6edf7;
+
   padding: 10px 12px;
 
-  border: 1px solid rgba(255,255,255,0.14);
   border-radius: 10px;
 
-  background: rgba(255,255,255,0.04);
-  color: inherit;
+  font-family: inherit;
+  font-size: 15px;
 
-  font: inherit;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
 }
 
-.form-group textarea {
-  resize: vertical;
-  min-height: 140px;
-}
 
+/* Slight change rather than bright focus styling */
 .form-group input:focus,
 .form-group textarea:focus {
-  outline: 2px solid rgba(255,255,255,0.25);
-  outline-offset: 2px;
+  outline: none;
+
+  border-color: rgba(255,255,255,0.28);
+  background: rgba(255,255,255,0.05);
 }
 
+
+/* Keep textarea tidy */
+.form-group textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+
+/* Button designed more like the existing site controls */
 .contact-submit {
   justify-self: start;
 
-  border: 1px solid rgba(255,255,255,0.16);
-  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  background: transparent;
+
   color: inherit;
 
-  padding: 10px 16px;
-  border-radius: 10px;
+  padding: 8px 12px;
 
-  font: inherit;
+  border-radius: 12px;
+
+  font-family: inherit;
+  font-size: 14px;
   font-weight: 600;
 
   cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .contact-submit:hover {
-  background: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.22);
 }
+
 
 @media (max-width: 860px) {
   .contact-layout {
