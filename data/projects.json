@@ -1,0 +1,74 @@
+[
+  {
+    "title": "SwipeBite",
+    "description": "A geospatial restaurant discovery application designed to help users find and explore restaurants through an interactive location-based interface.",
+    "technologies": [
+      "Python",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "category": "Software Engineering",
+    "featured": true,
+    "github": "",
+    "live": ""
+  },
+  {
+    "title": "Vinyl Wall",
+    "description": "A Raspberry Pi-powered physical music system that lets users select albums using hardware buttons, automatically starts Spotify playback and provides a Flask dashboard for configuration.",
+    "technologies": [
+      "Python",
+      "Flask",
+      "Raspberry Pi",
+      "GPIO",
+      "Spotify",
+      "Linux"
+    ],
+    "category": "Embedded / Software Engineering",
+    "featured": true,
+    "github": "",
+    "live": ""
+  },
+  {
+    "title": "Movie Comparison Web Scraper",
+    "description": "A Python data project that collects movie information from IMDb and Rotten Tomatoes, combines the datasets and analyses differences in ratings and rankings.",
+    "technologies": [
+      "Python",
+      "Pandas",
+      "BeautifulSoup",
+      "Selenium",
+      "Matplotlib"
+    ],
+    "category": "Data",
+    "featured": true,
+    "github": "",
+    "live": ""
+  },
+  {
+    "title": "Regex Python Chatbot",
+    "description": "A rule-based conversational chatbot using regular expressions and intent matching to recognise user requests, maintain simple conversation context and generate appropriate responses.",
+    "technologies": [
+      "Python",
+      "Regex",
+      "JSON"
+    ],
+    "category": "Software Engineering",
+    "featured": false,
+    "github": "",
+    "live": ""
+  },
+  {
+    "title": "Quiz Website",
+    "description": "A browser-based quiz application that loads questions from JSON, randomly selects questions, tracks the user's score and provides feedback.",
+    "technologies": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "JSON"
+    ],
+    "category": "Web Development",
+    "featured": false,
+    "github": "",
+    "live": "https://callum-ya.github.io/quiz-website/"
+  }
+]

@@ -22,6 +22,7 @@ a:hover { opacity: 0.9; }
   background: rgba(11, 18, 32, 0.9);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   backdrop-filter: blur(8px);
+  z-index: 100;
 }
 
 .header-inner {
@@ -227,3 +228,89 @@ h1 {
   50% { opacity: 0; }
 }
 
+/* ================================
+   Project cards
+   ================================ */
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading h2 {
+  margin-bottom: 8px;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.65;
+}
+
+.section-intro {
+  max-width: 65ch;
+  margin: 0;
+  opacity: 0.8;
+}
+
+
+/* Keep dynamically loaded cards consistent
+   with the original project cards */
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Small project category above title */
+.project-category {
+  margin: 0 0 6px !important;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.65;
+}
+
+
+/* Technologies retain the original .meta style */
+.project-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 10px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+
+/* Add bullet separators between technologies */
+.project-technologies span:not(:last-child)::after {
+  content: " • ";
+  white-space: pre;
+}
+
+
+/* Keep links aligned toward bottom of cards */
+.project-card .card-links {
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+
+/* Match the simple original link appearance */
+.card-links a {
+  font-weight: 500;
+}
+
+
+/* Spacing between Featured and Other projects */
+.other-projects-heading {
+  margin-top: 42px;
+  margin-bottom: 0;
+}
+
+.other-projects-heading h2 {
+  margin-bottom: 0;
+}

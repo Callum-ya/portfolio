@@ -1,3 +1,4 @@
+// Footer
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // Image slideshow
@@ -123,3 +124,111 @@ function typeWriter() {
 }
 
 window.addEventListener("load", typeWriter);
+
+// Project Section:
+// ================================
+// Projects
+// ================================
+
+async function loadProjects() {
+  try {
+    const response = await fetch("data/projects.json");
+
+    if (!response.ok) {
+      throw new Error(`Unable to load projects: ${response.status}`);
+    }
+
+    const projects = await response.json();
+
+    const featuredContainer = document.getElementById("featured-projects");
+    const otherContainer = document.getElementById("other-projects");
+
+    if (!featuredContainer || !otherContainer) {
+      return;
+    }
+
+    projects.forEach((project) => {
+      const projectCard = createProjectCard(project);
+
+      if (project.featured) {
+        featuredContainer.appendChild(projectCard);
+      } else {
+        otherContainer.appendChild(projectCard);
+      }
+    });
+  } catch (error) {
+    console.error("Error loading projects:", error);
+  }
+}
+
+
+function createProjectCard(project) {
+  const article = document.createElement("article");
+  article.classList.add("card", "project-card");
+
+  // Category
+  if (project.category) {
+    const category = document.createElement("p");
+    category.classList.add("project-category");
+    category.textContent = project.category;
+    article.appendChild(category);
+  }
+
+  // Title
+  const title = document.createElement("h3");
+  title.textContent = project.title;
+  article.appendChild(title);
+
+  // Description
+  const description = document.createElement("p");
+  description.textContent = project.description;
+  article.appendChild(description);
+
+  // Technologies
+  if (project.technologies && project.technologies.length > 0) {
+    const technologies = document.createElement("div");
+    technologies.classList.add("project-technologies");
+
+    project.technologies.forEach((technology) => {
+      const tag = document.createElement("span");
+      tag.textContent = technology;
+      technologies.appendChild(tag);
+    });
+
+    article.appendChild(technologies);
+  }
+
+  // Links
+  if (project.live || project.github) {
+    const links = document.createElement("div");
+    links.classList.add("card-links");
+
+    if (project.live) {
+      const liveLink = document.createElement("a");
+
+      liveLink.href = project.live;
+      liveLink.target = "_blank";
+      liveLink.rel = "noreferrer";
+      liveLink.textContent = "Live Demo ↗";
+
+      links.appendChild(liveLink);
+    }
+
+    if (project.github) {
+      const githubLink = document.createElement("a");
+
+      githubLink.href = project.github;
+      githubLink.target = "_blank";
+      githubLink.rel = "noreferrer";
+      githubLink.textContent = "View Code ↗";
+
+      links.appendChild(githubLink);
+    }
+
+    article.appendChild(links);
+  }
+
+  return article;
+}
+
+loadProjects();
