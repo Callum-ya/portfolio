@@ -1,0 +1,40 @@
+[
+  {
+    "module": "Machine Learning",
+    "description": "Exploring how machine learning models can learn patterns from data to make predictions and support intelligent decision-making.",
+    "topics": [
+      "Supervised Learning",
+      "Classification",
+      "Regression",
+      "Model Evaluation"
+    ]
+  },
+  {
+    "module": "Neural Networks",
+    "description": "Studying the theory and implementation of neural networks, includingthe principles of neurocomputing with artificial neural networks widely used for real-world problems such as classification, regression, pattern recognition, data mining, time-series modeling.",
+    "topics": [
+      "Neural Networks",
+      "Backpropagation",
+      "Gradient Descent",
+      "Deep Learning",
+      "Model Training"
+    ]
+  },
+  {
+    "module": "Dynamic Web Applications",
+    "description": "Deploying web applications to public-facing web servers and apply application updates in a structured manner.",
+    "topics": [
+    ]
+  },
+  {
+    "module": "Final Year Project",
+    "description": "Designing and developing an independent computer science project from initial research and requirements through implementation, testing and evaluation.",
+    "topics": [
+      "Research",
+      "Software Design",
+      "Implementation",
+      "Testing",
+      "Evaluation"
+    ]
+  }
+]

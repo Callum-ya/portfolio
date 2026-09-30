@@ -232,3 +232,67 @@ function createProjectCard(project) {
 }
 
 loadProjects();
+
+
+// ================================
+// What I'm Learning
+// ================================
+
+async function loadLearning() {
+  try {
+    const response = await fetch("data/learning.json");
+
+    if (!response.ok) {
+      throw new Error(`Unable to load learning data: ${response.status}`);
+    }
+
+    const modules = await response.json();
+
+    const learningContainer = document.getElementById("learning-grid");
+
+    if (!learningContainer) {
+      return;
+    }
+
+    modules.forEach((module) => {
+      const card = createLearningCard(module);
+      learningContainer.appendChild(card);
+    });
+
+  } catch (error) {
+    console.error("Error loading learning data:", error);
+  }
+}
+
+
+function createLearningCard(module) {
+  const article = document.createElement("article");
+  article.classList.add("card", "learning-card");
+
+  const title = document.createElement("h3");
+  title.textContent = module.module;
+
+  const description = document.createElement("p");
+  description.textContent = module.description;
+
+  article.appendChild(title);
+  article.appendChild(description);
+
+  if (module.topics && module.topics.length > 0) {
+    const topicList = document.createElement("ul");
+    topicList.classList.add("learning-topics");
+
+    module.topics.forEach((topic) => {
+      const item = document.createElement("li");
+      item.textContent = topic;
+      topicList.appendChild(item);
+    });
+
+    article.appendChild(topicList);
+  }
+
+  return article;
+}
+
+
+loadLearning();

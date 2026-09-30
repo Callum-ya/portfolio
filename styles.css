@@ -314,3 +314,210 @@ h1 {
 .other-projects-heading h2 {
   margin-bottom: 0;
 }
+
+/* ================================
+   Hero
+   ================================ */
+
+.hero-subtext {
+  margin: -4px 0 18px;
+  opacity: 0.7;
+  max-width: 60ch;
+}
+
+
+/* ================================
+   Education & Experience
+   ================================ */
+
+.education-list,
+.experience-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.education-header,
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.education-course,
+.experience-type {
+  margin: 0 0 10px;
+  opacity: 0.75;
+}
+
+.education-date {
+  margin: 0;
+  white-space: nowrap;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+
+/* ================================
+   About
+   ================================ */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.about-content p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.about-layout .about-slideshow {
+  margin-top: 0;
+  width: 100%;
+}
+
+
+/* ================================
+   Responsive
+   ================================ */
+
+@media (max-width: 860px) {
+
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .education-header,
+  .experience-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+}
+
+.learning-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.skills-grid .pill-list {
+  margin-top: 10px;
+}
+
+@media (max-width: 860px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================================
+   Contact
+   ================================ */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.contact-intro h2 {
+  margin-top: 0;
+}
+
+.contact-intro p {
+  max-width: 50ch;
+}
+
+.contact-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  font-weight: 600;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+}
+
+.form-group {
+  display: grid;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 12px;
+
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 10px;
+
+  background: rgba(255,255,255,0.04);
+  color: inherit;
+
+  font: inherit;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 2px solid rgba(255,255,255,0.25);
+  outline-offset: 2px;
+}
+
+.contact-submit {
+  justify-self: start;
+
+  border: 1px solid rgba(255,255,255,0.16);
+  background: rgba(255,255,255,0.08);
+  color: inherit;
+
+  padding: 10px 16px;
+  border-radius: 10px;
+
+  font: inherit;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.contact-submit:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+@media (max-width: 860px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
